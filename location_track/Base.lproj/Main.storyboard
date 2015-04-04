@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="location_track" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sw6-48-0QY">
+                                <rect key="frame" x="74" y="535" width="227" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="SH5-Vk-UCa"/>
+                                    <constraint firstAttribute="height" constant="88" id="q2B-yx-f2l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pU5-gE-EO4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="467" id="DaB-D1-ofC"/>
+                                    <constraint firstAttribute="width" constant="375" id="Vg3-Lg-Wws"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="pU5-gE-EO4" secondAttribute="centerY" id="1IJ-K8-UQA"/>
+                            <constraint firstItem="pU5-gE-EO4" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="4Qn-zQ-LGr"/>
+                            <constraint firstAttribute="centerX" secondItem="Sw6-48-0QY" secondAttribute="centerX" id="bOy-RD-vFl"/>
+                            <constraint firstAttribute="centerY" secondItem="Sw6-48-0QY" secondAttribute="centerY" id="hnm-Nj-8J6"/>
+                            <constraint firstAttribute="centerX" secondItem="pU5-gE-EO4" secondAttribute="centerX" id="u4h-9Q-moG"/>
+                            <constraint firstItem="Sw6-48-0QY" firstAttribute="top" secondItem="pU5-gE-EO4" secondAttribute="bottom" constant="68" id="x2D-1x-eQx"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="theLabel" destination="Sw6-48-0QY" id="q75-c5-wc9"/>
+                        <outlet property="theMap" destination="pU5-gE-EO4" id="zkM-Y2-KcF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="64.5" y="355.5"/>
+        </scene>
+    </scenes>
+</document>
